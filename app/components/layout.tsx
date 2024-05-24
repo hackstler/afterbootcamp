@@ -1,16 +1,15 @@
 "use client";
+import { useState } from "react";
 import NavLinks from "../ui/home/nav-links";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-// Map of links to display in the side navigation.
-// Depending on the size of the application, this would be stored in a database.
-
 export default function Layout({ children }: { children: React.ReactNode }) {
-  // refactor the NavLinks component to use the usePathname hook
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const pathName = usePathname();
   const textColor = pathName === "/pricing" ? "text-white" : "text-gray-900";
+
   return (
     <>
       <header className='absolute inset-x-0 top-0 z-50'>
@@ -21,7 +20,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           <div className='flex lg:flex-1'>
             <Link href='/' className='-m-1.5 p-1.5'>
               <Image
-                className='h-10 w-auto lg:h-12 shadow-md rounded-full' // Ajuste del tamaño del logo
+                className='h-10 w-auto lg:h-12 shadow-md rounded-full'
                 src='https://storage.googleapis.com/afterbootcamp/openart-image_Zssjbb-I_1716376231201_raw.png'
                 alt='Logo'
                 width={40}
@@ -33,6 +32,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             <button
               type='button'
               className='-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700'
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             >
               <span className='sr-only'>Open main menu</span>
               <svg
@@ -63,6 +63,13 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             </Link>
           </div>
         </nav>
+        {mobileMenuOpen && (
+          <div className='lg:hidden'>
+            <nav className='space-y-1 px-2 pt-2 pb-3 sm:px-3'>
+              <NavLinks />
+            </nav>
+          </div>
+        )}
       </header>
       {children}
     </>

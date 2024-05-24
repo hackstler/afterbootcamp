@@ -3,6 +3,7 @@
 "use client";
 import React, { useState } from "react";
 import Particles from "./particles";
+import Link from "next/link";
 
 const plans = [
   {
@@ -108,12 +109,12 @@ const PricingCarousel: React.FC = () => {
                 {plans[currentIndex].price}
               </p>
             </div>
-            <a
-              href='#'
+            <Link
+              href='contact'
               className='mt-10 block w-full rounded-md bg-medium-red px-3 py-2 text-center text-sm font-semibold text-white shadow-sm hover:bg-medium-pink  focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600'
             >
               Suscríbete
-            </a>
+            </Link>
           </div>
           <div className='flex justify-between mt-8'>
             <button

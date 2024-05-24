@@ -7,8 +7,6 @@ import {
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-// Map of links to display in the side navigation.
-// Depending on the size of the application, this would be stored in a database.
 const links = [
   { name: "About Us", href: "/about", icon: HomeIcon },
   {
@@ -21,7 +19,6 @@ const links = [
 ];
 
 export default function NavLinks() {
-  // refactor the NavLinks component to use the usePathname hook
   const pathName = usePathname();
   const textColor = pathName === "/pricing" ? "text-white" : "text-gray-900";
   return (
@@ -32,9 +29,10 @@ export default function NavLinks() {
           <Link
             key={link.name}
             href={link.href}
-            className={`text-sm font-semibold leading-6 ${textColor}`}
+            className={`text-sm font-semibold leading-6 ${textColor} flex items-center gap-2`}
           >
-            <p className='hidden md:block'>{link.name}</p>
+            <LinkIcon className='h-5 w-5' />
+            <span>{link.name}</span>
           </Link>
         );
       })}
