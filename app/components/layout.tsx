@@ -1,7 +1,16 @@
+"use client";
 import NavLinks from "../ui/home/nav-links";
 import Image from "next/image";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+
+// Map of links to display in the side navigation.
+// Depending on the size of the application, this would be stored in a database.
 
 export default function Layout({ children }: { children: React.ReactNode }) {
+  // refactor the NavLinks component to use the usePathname hook
+  const pathName = usePathname();
+  const textColor = pathName === "/pricing" ? "text-white" : "text-gray-900";
   return (
     <>
       <header className='absolute inset-x-0 top-0 z-50'>
@@ -10,7 +19,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           aria-label='Global'
         >
           <div className='flex lg:flex-1'>
-            <a href='#' className='-m-1.5 p-1.5'>
+            <Link href='/' className='-m-1.5 p-1.5'>
               <Image
                 className='h-10 w-auto lg:h-12 shadow-md rounded-full' // Ajuste del tamaño del logo
                 src='https://storage.googleapis.com/afterbootcamp/openart-image_Zssjbb-I_1716376231201_raw.png'
@@ -18,7 +27,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                 width={40}
                 height={40}
               />
-            </a>
+            </Link>
           </div>
           <div className='flex lg:hidden'>
             <button
@@ -46,12 +55,12 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             <NavLinks />
           </div>
           <div className='hidden lg:flex lg:flex-1 lg:justify-end'>
-            <a
+            <Link
               href='/contact'
-              className='text-sm font-semibold leading-6 text-gray-900'
+              className={`text-sm font-semibold leading-6 ${textColor}`}
             >
-              Join Us <span aria-hidden='true'>→</span>
-            </a>
+              Start now <span aria-hidden='true'>→</span>
+            </Link>
           </div>
         </nav>
       </header>

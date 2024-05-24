@@ -1,4 +1,5 @@
 import Particles from "./particles";
+import Link from "next/link";
 
 // components/HeroSection.tsx
 const HeroSection: React.FC = () => {
@@ -13,10 +14,10 @@ const HeroSection: React.FC = () => {
       <div className='hidden sm:mb-8 sm:flex sm:justify-center'>
         <div className='relative rounded-full px-3 py-1 text-sm leading-6 text-gray-900 ring-1 ring-gray-900/10 hover:ring-gray-900/20'>
           Announcing our next round of funding.{" "}
-          <a href='#' className='font-semibold text-white'>
+          <Link href='contact' className='font-semibold text-white'>
             <span className='absolute inset-0' aria-hidden='true'></span>Read
             more <span aria-hidden='true'>&rarr;</span>
-          </a>
+          </Link>
         </div>
       </div>
       <h1 className='text-4xl font-bold tracking-tight text-white sm:text-6xl'>
@@ -28,15 +29,18 @@ const HeroSection: React.FC = () => {
         mentoría personalizada de expertos en DevOps y Full Stack.
       </p>
       <div className='mt-10 mb-14 flex items-center justify-center gap-x-6'>
-        <a
-          href='#'
+        <Link
+          href='contact'
           className='rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold text-medium-red shadow-sm hover:bg-gray-900'
         >
           Comienza ahora
-        </a>
-        <a href='#' className='text-sm font-semibold leading-6 text-gray-900'>
+        </Link>
+        <Link
+          href='history'
+          className='text-sm font-semibold leading-6 text-gray-900'
+        >
           Descubre más →
-        </a>
+        </Link>
       </div>
     </div>
   );

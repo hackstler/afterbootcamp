@@ -1,4 +1,5 @@
 import Particles from "./particles";
+import Link from "next/link";
 
 const AboutSection: React.FC = () => {
   return (
@@ -45,28 +46,28 @@ const AboutSection: React.FC = () => {
         </div>
         <div className='mx-auto mt-10 max-w-2xl lg:mx-0 lg:max-w-none'>
           <div className='grid grid-cols-1 gap-x-8 gap-y-6 text-base font-semibold leading-7 text-medium-red sm:grid-cols-2 md:flex lg:gap-x-10'>
-            <a href='#' className='hover:text-gray-300'>
+            <Link href='history' className='hover:text-gray-300'>
               Conoce Mi Viaje:{" "}
               <span aria-hidden='true'>
                 {" "}
                 Descubre cómo logré superar los desafíos del mundo tech para
                 construir una carrera exitosa. ¡Tú también puedes! →
               </span>
-            </a>
-            <a href='#' className='hover:text-gray-300'>
+            </Link>
+            <Link href='contact' className='hover:text-gray-300'>
               Mentoría Personalizada:{" "}
               <span aria-hidden='true'>
                 Obtén la guía precisa y el apoyo necesario para transformar tus
                 habilidades en éxito profesional. ¡Empieza hoy! →
               </span>
-            </a>
-            <a href='#' className='hover:text-gray-300'>
+            </Link>
+            <Link href='pricing' className='hover:text-gray-300'>
               Unirse al Programa:{" "}
               <span aria-hidden='true'>
                 Únete hoy y comienza a construir tu futuro con nuestra guía
                 experta. →
               </span>
-            </a>
+            </Link>
           </div>
         </div>
       </div>
