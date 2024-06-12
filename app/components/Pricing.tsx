@@ -6,24 +6,25 @@ import Particles from "./particles";
 import Link from "next/link";
 
 const plans = [
+  // {
+  //   title: "Suscripción Mensual",
+  //   description:
+  //     "Acceso ilimitado a mentoría, cursos y proyectos colaborativos.",
+  //   price: "49",
+  //   includes: [
+  //     "Mentoría ilimitada",
+  //     "Acceso a todos los cursos y talleres",
+  //     "Proyectos colaborativos",
+  //   ],
+  // },
   {
-    title: "Suscripción Mensual",
-    description:
-      "Acceso ilimitado a mentoría, cursos y proyectos colaborativos.",
-    price: "$49 USD / mes",
-    includes: [
-      "Mentoría ilimitada",
-      "Acceso a todos los cursos y talleres",
-      "Proyectos colaborativos",
-    ],
-  },
-  {
-    title: "Pago por Sesión o Curso",
+    title: "Pago por Sesión / Mentoría",
     description: "Paga solo por lo que necesitas, sin compromisos.",
-    price: "Varía por sesión/curso",
+    price: "Varía por sesión",
     includes: [
+      "Evaluación actual de tu carrera",
       "Acceso a sesiones individuales",
-      "Cursos y talleres específicos",
+      "Acceso a sesiones grupales",
     ],
   },
   {
@@ -64,11 +65,11 @@ const PricingCarousel: React.FC = () => {
       <div className='mx-auto max-w-7xl px-6 lg:px-8'>
         <div className='mx-auto max-w-2xl sm:text-center'>
           <h2 className='text-3xl font-bold tracking-tight text-medium-pink sm:text-4xl'>
-            Precios Claros y Sin Trucos
+            Elige tu forma de crecer
           </h2>
           <p className='mt-6 text-lg leading-8 text-gray-300'>
-            Elige el plan que mejor se adapte a tus necesidades y empieza a
-            transformar tu carrera en tecnología.
+            Empieza con el plan que mejor se adapte a tus necesidades y
+            evoluciona tu carrera en tecnología.
           </p>
         </div>
         <div className='relative mt-16 max-w-2xl mx-auto'>

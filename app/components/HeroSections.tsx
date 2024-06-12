@@ -11,15 +11,7 @@ const HeroSection: React.FC = () => {
         rgba='rgba(255, 255, 255'
       />
 
-      <div className='hidden sm:mb-8 sm:flex sm:justify-center'>
-        <div className='relative rounded-full px-3 py-1 text-sm leading-6 text-gray-900 ring-1 ring-gray-900/10 hover:ring-gray-900/20'>
-          Announcing our next round of funding.{" "}
-          <Link href='contact' className='font-semibold text-white'>
-            <span className='absolute inset-0' aria-hidden='true'></span>Read
-            more <span aria-hidden='true'>&rarr;</span>
-          </Link>
-        </div>
-      </div>
+      <div className='hidden sm:mb-8 sm:flex sm:justify-center'></div>
       <h1 className='text-4xl font-bold tracking-tight text-white sm:text-6xl'>
         Impulsa tu Carrera con Afterbootcamp
       </h1>

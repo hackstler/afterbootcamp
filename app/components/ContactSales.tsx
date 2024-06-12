@@ -1,19 +1,6 @@
-/*
-  This example requires some changes to your config:
-  
-  ```
-  // tailwind.config.js
-  module.exports = {
-    // ...
-    plugins: [
-      // ...
-      require('@tailwindcss/forms'),
-    ],
-  }
-  ```
-*/
 "use client";
-import { useState } from "react";
+import { useForm } from "react-hook-form";
+import { useState, useEffect } from "react";
 import { ChevronDownIcon } from "@heroicons/react/20/solid";
 import { Field, Label, Switch } from "@headlessui/react";
 
@@ -21,8 +8,50 @@ function classNames(...classes: string[]) {
   return classes.filter(Boolean).join(" ");
 }
 
+type FormData = {
+  firstName: string;
+  lastName: string;
+  email: string;
+  phoneNumber: string;
+  country: string;
+  message: string;
+};
+
 export default function ContactSales() {
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm<FormData>();
   const [agreed, setAgreed] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [formSent, setFormSent] = useState(false);
+
+  const onSubmit = async (data: FormData) => {
+    setIsSubmitting(true);
+    try {
+      const response = await fetch("/api/send-email", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      });
+      if (response.ok) {
+        setFormSent(true);
+      } else {
+        console.error("Error sending email");
+      }
+    } catch (error) {
+      console.error("Error sending email", error);
+    }
+    setIsSubmitting(false);
+  };
+
+  // Ensure Switch state is only set on client-side
+  useEffect(() => {
+    setAgreed(false);
+  }, []);
 
   return (
     <div className='relative min-h-screen flex flex-col items-center w-full justify-center overflow-hidden bg-white px-6 py-24 sm:py-32 lg:px-8'>
@@ -40,15 +69,15 @@ export default function ContactSales() {
       </div>
       <div className='mx-auto max-w-2xl text-center'>
         <h2 className='text-3xl font-bold tracking-tight text-medium-red sm:text-4xl'>
-          Contact sales
+          Solicita Información sobre Mentorías Post-Bootcamp
         </h2>
         <p className='mt-2 text-lg leading-8 text-gray-600'>
-          Aute magna irure deserunt veniam aliqua magna enim voluptate.
+          Completa el formulario para recibir más información sobre nuestras
+          mentorías personalizadas.
         </p>
       </div>
       <form
-        action='#'
-        method='POST'
+        onSubmit={handleSubmit(onSubmit)}
         className='mx-auto mt-16 max-w-xl sm:mt-20'
       >
         <div className='grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2'>
@@ -57,16 +86,20 @@ export default function ContactSales() {
               htmlFor='first-name'
               className='block text-sm font-semibold leading-6 text-medium-red'
             >
-              First name
+              Nombre
             </label>
             <div className='mt-2.5'>
               <input
                 type='text'
-                name='first-name'
                 id='first-name'
+                {...register("firstName", { required: "Nombre es requerido" })}
                 autoComplete='given-name'
+                placeholder='Tu nombre'
                 className='block w-full rounded-md border-0 px-3.5 py-2 text-medium-red shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6'
               />
+              {errors.firstName && (
+                <p className='text-red-600'>{errors.firstName.message}</p>
+              )}
             </div>
           </div>
           <div>
@@ -74,33 +107,20 @@ export default function ContactSales() {
               htmlFor='last-name'
               className='block text-sm font-semibold leading-6 text-medium-red'
             >
-              Last name
+              Apellido
             </label>
             <div className='mt-2.5'>
               <input
                 type='text'
-                name='last-name'
                 id='last-name'
+                {...register("lastName", { required: "Apellido es requerido" })}
                 autoComplete='family-name'
+                placeholder='Tu apellido'
                 className='block w-full rounded-md border-0 px-3.5 py-2 text-medium-red shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6'
               />
-            </div>
-          </div>
-          <div className='sm:col-span-2'>
-            <label
-              htmlFor='company'
-              className='block text-sm font-semibold leading-6 text-medium-red'
-            >
-              Company
-            </label>
-            <div className='mt-2.5'>
-              <input
-                type='text'
-                name='company'
-                id='company'
-                autoComplete='organization'
-                className='block w-full rounded-md border-0 px-3.5 py-2 text-medium-red shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6'
-              />
+              {errors.lastName && (
+                <p className='text-red-600'>{errors.lastName.message}</p>
+              )}
             </div>
           </div>
           <div className='sm:col-span-2'>
@@ -108,16 +128,22 @@ export default function ContactSales() {
               htmlFor='email'
               className='block text-sm font-semibold leading-6 text-medium-red'
             >
-              Email
+              Correo Electrónico
             </label>
             <div className='mt-2.5'>
               <input
                 type='email'
-                name='email'
                 id='email'
+                {...register("email", {
+                  required: "Correo electrónico es requerido",
+                })}
                 autoComplete='email'
+                placeholder='Tu correo electrónico'
                 className='block w-full rounded-md border-0 px-3.5 py-2 text-medium-red shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6'
               />
+              {errors.email && (
+                <p className='text-red-600'>{errors.email.message}</p>
+              )}
             </div>
           </div>
           <div className='sm:col-span-2'>
@@ -125,34 +151,35 @@ export default function ContactSales() {
               htmlFor='phone-number'
               className='block text-sm font-semibold leading-6 text-medium-red'
             >
-              Phone number
+              Número de Teléfono
             </label>
             <div className='relative mt-2.5'>
               <div className='absolute inset-y-0 left-0 flex items-center'>
                 <label htmlFor='country' className='sr-only'>
-                  Country
+                  País
                 </label>
                 <select
                   id='country'
-                  name='country'
-                  className='h-full rounded-md border-0 bg-transparent bg-none py-0 pl-4 pr-9 text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm'
+                  {...register("country")}
+                  className='h-full rounded-md border-0 bg-transparent bg-none py-0 text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm'
                 >
-                  <option>US</option>
-                  <option>CA</option>
-                  <option>EU</option>
+                  <option value='ES'>ES</option>
+                  <option value='LATAM'>LATAM</option>
                 </select>
-                <ChevronDownIcon
-                  className='pointer-events-none absolute right-3 top-0 h-full w-5 text-gray-400'
-                  aria-hidden='true'
-                />
               </div>
               <input
                 type='tel'
-                name='phone-number'
                 id='phone-number'
+                {...register("phoneNumber", {
+                  required: "Número de teléfono es requerido",
+                })}
                 autoComplete='tel'
+                placeholder='Tu número de teléfono'
                 className='block w-full rounded-md border-0 px-3.5 py-2 pl-20 text-medium-red shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6'
               />
+              {errors.phoneNumber && (
+                <p className='text-red-600'>{errors.phoneNumber.message}</p>
+              )}
             </div>
           </div>
           <div className='sm:col-span-2'>
@@ -160,16 +187,21 @@ export default function ContactSales() {
               htmlFor='message'
               className='block text-sm font-semibold leading-6 text-medium-red'
             >
-              Message
+              Descripción
             </label>
             <div className='mt-2.5'>
               <textarea
-                name='message'
                 id='message'
+                {...register("message", {
+                  required: "Descripción es requerida",
+                })}
                 rows={4}
+                placeholder='Cuéntanos un poco sobre ti y tus objetivos'
                 className='block w-full rounded-md border-0 px-3.5 py-2 text-medium-red shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6'
-                defaultValue={""}
               />
+              {errors.message && (
+                <p className='text-red-600'>{errors.message.message}</p>
+              )}
             </div>
           </div>
           <Field as='div' className='flex gap-x-4 sm:col-span-2'>
@@ -182,7 +214,7 @@ export default function ContactSales() {
                   "flex w-8 flex-none cursor-pointer rounded-full p-px ring-1 ring-inset ring-gray-900/5 transition-colors duration-200 ease-in-out focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
                 )}
               >
-                <span className='sr-only'>Agree to policies</span>
+                <span className='sr-only'>Aceptar políticas</span>
                 <span
                   aria-hidden='true'
                   className={classNames(
@@ -193,9 +225,9 @@ export default function ContactSales() {
               </Switch>
             </div>
             <Label className='text-sm leading-6 text-gray-600'>
-              By selecting this, you agree to our{" "}
+              Al seleccionar esto, aceptas nuestra{" "}
               <a href='#' className='font-semibold text-medium-red'>
-                privacy&nbsp;policy
+                política de privacidad
               </a>
               .
             </Label>
@@ -205,9 +237,15 @@ export default function ContactSales() {
           <button
             type='submit'
             className='block w-full rounded-md bg-medium-red px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600'
+            disabled={isSubmitting}
           >
-            Let's talk
+            {isSubmitting ? "Enviando..." : "Enviar Solicitud"}
           </button>
+          {formSent && (
+            <p className='text-green-600 mt-4'>
+              Formulario enviado correctamente.
+            </p>
+          )}
         </div>
       </form>
     </div>
