@@ -26,10 +26,10 @@ export async function POST(request: NextRequest) {
       <p>El equipo de Mentorías After-Bootcamp</p>
     <br>
     <div style="border-top: 1px solid #ccc; padding-top: 10px; backgroud-color: white;">
-      <img src="https://storage.googleapis.com/afterbootcamp/openart-image_1meb51Ew_1716370930361_raw.png" alt="AfterBootcamp Logo" style="height: 50px; backgroud-color: white;">
+      <img src="https://storage.googleapis.com/afterbootcamp/openart-image_Zssjbb-I_1716376231201_raw.png" alt="AfterBootcamp Logo" style="height: 50px; backgroud-color: white;">
       <p style="margin: 0; color: #555;">AfterBootcamp</p>
       <p style="margin: 0; color: #555;">Tu éxito, nuestra misión.</p>
-      <p style="margin: 0; color: #555;">Email: info@afterbootcamp.com | Teléfono: 699 211 701</p>
+      <p style="margin: 0; color: #555;">Email: sergio@afterbootcamp.com | Teléfono: 699 211 701</p>
       <p style="margin: 0; color: #555;">
         <a href="https://afterbootcamp.es" style="color: #007BFF;">Visita nuestra web</a> | 
         <a href="https://linkedin.com/company/afterbootcamp" style="color: #007BFF;">LinkedIn</a> | 
