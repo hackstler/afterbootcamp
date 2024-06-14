@@ -20,7 +20,7 @@ export async function POST(request: NextRequest) {
   <div style="font-family: Arial, sans-serif; color: #333;">
       <p>Hola ${firstName},</p>
       <p>Gracias por solicitar información sobre nuestras mentorías After-bootcamp.</p>
-      <p>Puedes reservar tu primera sesión con nosotros en el siguiente enlace:</p>
+      <p>Puedes reservar tu primera sesión 100% gratis con nosotros en el siguiente enlace:</p>
       <p><a href="${calendlyLink}" style="color: #007BFF;">Reserva tu sesión</a></p>
       <p>Saludos,</p>
       <p>El equipo de Mentorías After-Bootcamp</p>
