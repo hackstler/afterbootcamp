@@ -1,6 +1,8 @@
 "use client";
+import { useEffect } from "react";
 import { useForm } from "react-hook-form";
-import { useState, useEffect } from "react";
+import { useState } from "react";
+import { useRouter } from "next/navigation";
 import { ChevronDownIcon } from "@heroicons/react/20/solid";
 import { Field, Label, Switch } from "@headlessui/react";
 
@@ -18,14 +20,20 @@ type FormData = {
 };
 
 export default function ContactSales() {
+  const [isMounted, setIsMounted] = useState(false);
+  const router = useRouter();
   const {
     register,
     handleSubmit,
     formState: { errors },
+    reset,
   } = useForm<FormData>();
   const [agreed, setAgreed] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [formSent, setFormSent] = useState(false);
+
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
 
   const onSubmit = async (data: FormData) => {
     setIsSubmitting(true);
@@ -38,7 +46,10 @@ export default function ContactSales() {
         body: JSON.stringify(data),
       });
       if (response.ok) {
-        setFormSent(true);
+        reset(); // Reset the form fields
+        if (isMounted) {
+          router.push("/thank-you"); // Redirect to the thank-you page
+        }
       } else {
         console.error("Error sending email");
       }
@@ -48,10 +59,9 @@ export default function ContactSales() {
     setIsSubmitting(false);
   };
 
-  // Ensure Switch state is only set on client-side
-  useEffect(() => {
-    setAgreed(false);
-  }, []);
+  if (!isMounted) {
+    return null; // or a loading spinner
+  }
 
   return (
     <div className='relative min-h-screen flex flex-col items-center w-full justify-center overflow-hidden bg-white px-6 py-24 sm:py-32 lg:px-8'>
@@ -187,13 +197,13 @@ export default function ContactSales() {
               htmlFor='message'
               className='block text-sm font-semibold leading-6 text-medium-red'
             >
-              Descripción
+              Mensaje
             </label>
             <div className='mt-2.5'>
               <textarea
                 id='message'
                 {...register("message", {
-                  required: "Descripción es requerida",
+                  required: "Mensaje es requerido",
                 })}
                 rows={4}
                 placeholder='Cuéntanos un poco sobre ti y tus objetivos'
@@ -225,12 +235,15 @@ export default function ContactSales() {
               </Switch>
             </div>
             <Label className='text-sm leading-6 text-gray-600'>
-              Al seleccionar esto, aceptas nuestra{" "}
-              <a href='#' className='font-semibold text-medium-red'>
-                política de privacidad
-              </a>
-              .
+              Al seleccionar esto, aceptas nuestra
             </Label>
+            <a
+              href='/privacy-policy'
+              className='text-sm leading-6 font-semibold text-medium-red'
+              target='blank'
+            >
+              política de privacidad
+            </a>
           </Field>
         </div>
         <div className='mt-10'>
@@ -241,11 +254,6 @@ export default function ContactSales() {
           >
             {isSubmitting ? "Enviando..." : "Enviar Solicitud"}
           </button>
-          {formSent && (
-            <p className='text-green-600 mt-4'>
-              Formulario enviado correctamente.
-            </p>
-          )}
         </div>
       </form>
     </div>
