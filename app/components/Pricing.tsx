@@ -6,20 +6,19 @@ import Particles from "./particles";
 import Link from "next/link";
 
 const plans = [
-  // {
-  //   title: "Suscripción Mensual",
-  //   description:
-  //     "Acceso ilimitado a mentoría, cursos y proyectos colaborativos.",
-  //   price: "49",
-  //   includes: [
-  //     "Mentoría ilimitada",
-  //     "Acceso a todos los cursos y talleres",
-  //     "Proyectos colaborativos",
-  //   ],
-  // },
   {
-    title: "Pago por Sesión / Mentoría",
-    description: "Paga solo por lo que necesitas, sin compromisos.",
+    title: "¿ Necesitas ayuda en tus proyectos ?",
+    description: "Definimos tus objetivos y te ayudamos a alcanzarlos.",
+    price: "En función de tus necesidades",
+    includes: [
+      "Evaluación de tus proyectos",
+      "Acceso a recursos exclusivos",
+      "Plan de acción personalizado",
+    ],
+  },
+  {
+    title: "Sesión / Mentoría",
+    description: "Primera sesión gratuita para evaluar tus necesidades.",
     price: "Varía por sesión",
     includes: [
       "Evaluación actual de tu carrera",
@@ -107,7 +106,7 @@ const PricingCarousel: React.FC = () => {
             </ul>
             <div className='mt-10'>
               <p className='text-base font-semibold text-medium-pink '>
-                {plans[currentIndex].price}
+                Precio: {plans[currentIndex].price}
               </p>
             </div>
             <Link

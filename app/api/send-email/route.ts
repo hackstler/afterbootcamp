@@ -6,15 +6,13 @@ export async function POST(request: NextRequest) {
     await request.json();
   const calendlyLink = process.env.CALENDLY_LINK;
 
-  console.log("🚀 ~ POST ~ process.env.GMAIL_PASS:", process.env.GMAIL_PASS);
-  console.log("🚀 ~ POST ~ process.env.GMAIL_USER:", process.env.GMAIL_USER);
   const transporter = nodemailer.createTransport({
     host: "smtp.serviciodecorreo.es",
     port: 465,
     secure: true, // true for 465, false for other ports
     auth: {
       user: process.env.GMAIL_USER,
-      pass: "TrumanCapote$3",
+      pass: process.env.GMAIL_PASS,
     },
   });
 

@@ -95,7 +95,7 @@ export default function ContactSales() {
                 {...register("firstName", { required: "Nombre es requerido" })}
                 autoComplete='given-name'
                 placeholder='Tu nombre'
-                className='block w-full rounded-md border-0 px-3.5 py-2 text-medium-red shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6'
+                className='block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6'
               />
               {errors.firstName && (
                 <p className='text-red-600'>{errors.firstName.message}</p>
@@ -116,7 +116,7 @@ export default function ContactSales() {
                 {...register("lastName", { required: "Apellido es requerido" })}
                 autoComplete='family-name'
                 placeholder='Tu apellido'
-                className='block w-full rounded-md border-0 px-3.5 py-2 text-medium-red shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6'
+                className='block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6'
               />
               {errors.lastName && (
                 <p className='text-red-600'>{errors.lastName.message}</p>
@@ -139,7 +139,7 @@ export default function ContactSales() {
                 })}
                 autoComplete='email'
                 placeholder='Tu correo electrónico'
-                className='block w-full rounded-md border-0 px-3.5 py-2 text-medium-red shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6'
+                className='block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6'
               />
               {errors.email && (
                 <p className='text-red-600'>{errors.email.message}</p>
@@ -168,14 +168,14 @@ export default function ContactSales() {
                 </select>
               </div>
               <input
-                type='tel'
+                type='number'
                 id='phone-number'
                 {...register("phoneNumber", {
                   required: "Número de teléfono es requerido",
                 })}
                 autoComplete='tel'
                 placeholder='Tu número de teléfono'
-                className='block w-full rounded-md border-0 px-3.5 py-2 pl-20 text-medium-red shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6'
+                className='block w-full rounded-md border-0 px-3.5 py-2 pl-20 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6'
               />
               {errors.phoneNumber && (
                 <p className='text-red-600'>{errors.phoneNumber.message}</p>
@@ -197,7 +197,7 @@ export default function ContactSales() {
                 })}
                 rows={4}
                 placeholder='Cuéntanos un poco sobre ti y tus objetivos'
-                className='block w-full rounded-md border-0 px-3.5 py-2 text-medium-red shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6'
+                className='block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6'
               />
               {errors.message && (
                 <p className='text-red-600'>{errors.message.message}</p>
