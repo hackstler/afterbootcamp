@@ -17,8 +17,8 @@ const HeroSection: React.FC = () => {
       </h1>
 
       <p className='mt-6 text-lg leading-8 text-gray-200'>
-        Transforma tu experiencia post-bootcamp en éxito profesional con
-        mentoría personalizada de expertos en DevOps y Full Stack.
+        Transforma tu experiencia post-formación en éxito profesional con
+        mentoría personalizada de expertos Full Stack.
       </p>
       <div className='mt-10 mb-14 flex items-center justify-center gap-x-6'>
         <Link
