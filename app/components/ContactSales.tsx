@@ -55,6 +55,13 @@ export const ContactSales: React.FC<{
       });
       if (response.ok) {
         reset(); // Reset the form fields
+        if (window.gtag) {
+          window.gtag("event", "submit_form", {
+            event_category: "Contact",
+            event_label: "Submit Contact Form",
+            value: 1,
+          });
+        }
         if (isMounted) {
           router.push("/thank-you"); // Redirect to the thank-you page
         }
