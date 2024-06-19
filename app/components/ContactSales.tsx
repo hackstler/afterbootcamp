@@ -1,5 +1,5 @@
 "use client";
-import { useEffect } from "react";
+import React, { useEffect } from "react";
 import { useForm } from "react-hook-form";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
@@ -10,6 +10,8 @@ import Modal from "./Modal";
 function classNames(...classes: string[]) {
   return classes.filter(Boolean).join(" ");
 }
+
+type setOPenModal = () => void;
 
 type FormData = {
   firstName: string;
@@ -23,7 +25,8 @@ type FormData = {
 export const ContactSales: React.FC<{
   id?: string;
   classNameButton?: string;
-}> = ({ id, classNameButton }) => {
+  children?: React.ReactNode;
+}> = ({ id, classNameButton, children }) => {
   const [isMounted, setIsMounted] = useState(false);
   const router = useRouter();
   const {
@@ -67,12 +70,29 @@ export const ContactSales: React.FC<{
   if (!isMounted) {
     return null; // or a loading spinner
   }
+  const clonedChildren = children
+    ? React.Children.map(children, (child) => {
+        if (React.isValidElement(child)) {
+          return React.cloneElement(child as React.ReactElement<any>, {
+            setOpenModal: setIsModalOpen,
+          });
+        }
+        return child;
+      })
+    : null;
   // TODO: hacer refactor del formulario
   return (
     <>
-      <button onClick={() => setIsModalOpen(true)} className={classNameButton}>
-        Comienza ahora
-      </button>
+      {clonedChildren ? (
+        clonedChildren
+      ) : (
+        <button
+          onClick={() => setIsModalOpen(true)}
+          className={classNameButton}
+        >
+          Comienza ahora
+        </button>
+      )}
       <Modal open={isModalOpen} setOpen={() => setIsModalOpen(false)}>
         <div
           id={id}

@@ -15,7 +15,7 @@ const links = [
     icon: DocumentDuplicateIcon,
   },
   { name: "Pricing", href: "/#pricing-section", icon: UserGroupIcon },
-  { name: "History", href: "/history", icon: UserGroupIcon },
+  { name: "History", href: "/#history-section", icon: UserGroupIcon },
 ];
 
 export default function NavLinks() {

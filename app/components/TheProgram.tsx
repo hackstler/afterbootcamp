@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import Particles from "./particles";
 import { useRouter } from "next/navigation";
 import { CheckCircleIcon } from "@heroicons/react/20/solid"; // Importar el ícono correcto de Heroicons v2
+import ContactSales from "./ContactSales";
 
 const steps = [
   {
@@ -36,9 +37,43 @@ const steps = [
       "https://storage.googleapis.com/afterbootcamp/DALL%C2%B7E%202024-06-19%2021.15.42%20-%20A%20person%20standing%20at%20a%20starting%20line%20on%20a%20running%20track%2C%20ready%20to%20begin%20a%20race.%20The%20starting%20line%20is%20clearly%20marked%2C%20with%20the%20person%20in%20a%20focused%2C%20det.webp",
   },
 ];
+// TODO: Abstraer el componente StepComponent
+const StepComponent: React.FC<{ setOpenModal?: (open: boolean) => void }> = ({
+  setOpenModal,
+}) => {
+  const [activeStep, setActiveStep] = useState<number | null>(null);
+  return (
+    <div className='mt-10 grid gap-10 sm:grid-cols-1 md:grid-cols-3'>
+      {steps.map((step, index) => (
+        <div
+          key={index}
+          className={`relative group bg-white text-gray-900 shadow-xl rounded-lg p-8 cursor-pointer transition-transform transform hover:scale-105 ${
+            activeStep === index ? "bg-opacity-90" : "bg-opacity-75"
+          }`}
+          onClick={() => setOpenModal && setOpenModal(true)}
+        >
+          <img
+            src={step.image}
+            alt={step.title}
+            className='w-full h-32 object-cover rounded-lg mb-4'
+          />
+          <h3 className='text-2xl font-bold'>{step.title}</h3>
+          <div className='absolute inset-0 opacity-0 group-hover:opacity-75 transition-opacity rounded-lg'></div>
+          <ul className='mt-4 text-start list-disc list-inside space-y-2'>
+            {step.description.map((desc, i) => (
+              <div key={i}>
+                <CheckCircleIcon className='inline w-5 h-5 text-green-500 mr-2' />
+                {desc}
+              </div>
+            ))}
+          </ul>
+        </div>
+      ))}
+    </div>
+  );
+};
 
 const TheProgram: React.FC<{ id?: string }> = ({ id }) => {
-  const [activeStep, setActiveStep] = useState<number | null>(null);
   const router = useRouter();
 
   return (
@@ -60,33 +95,10 @@ const TheProgram: React.FC<{ id?: string }> = ({ id }) => {
           Descubre cómo nuestro programa te guiará desde el punto de partida
           hasta conseguir tus objetivos.
         </p>
-        <div className='mt-10 grid gap-10 sm:grid-cols-1 md:grid-cols-3'>
-          {steps.map((step, index) => (
-            <div
-              key={index}
-              className={`relative group bg-white text-gray-900 shadow-xl rounded-lg p-8 cursor-pointer transition-transform transform hover:scale-105 ${
-                activeStep === index ? "bg-opacity-90" : "bg-opacity-75"
-              }`}
-              onClick={() => router.push("/contact")}
-            >
-              <img
-                src={step.image}
-                alt={step.title}
-                className='w-full h-32 object-cover rounded-lg mb-4'
-              />
-              <h3 className='text-2xl font-bold'>{step.title}</h3>
-              <div className='absolute inset-0 opacity-0 group-hover:opacity-75 transition-opacity rounded-lg'></div>
-              <ul className='mt-4 text-start list-disc list-inside space-y-2'>
-                {step.description.map((desc, i) => (
-                  <div key={i}>
-                    <CheckCircleIcon className='inline w-5 h-5 text-green-500 mr-2' />
-                    {desc}
-                  </div>
-                ))}
-              </ul>
-            </div>
-          ))}
-        </div>
+
+        <ContactSales>
+          <StepComponent />
+        </ContactSales>
       </div>
     </div>
   );
