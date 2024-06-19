@@ -20,9 +20,11 @@ export default function RootLayout({
 
   useEffect(() => {
     const handleRouteChange = (url: string) => {
-      window.gtag("config", GA_TRACKING_ID, {
-        page_path: url,
-      });
+      if (window.gtag) {
+        window.gtag("config", GA_TRACKING_ID, {
+          page_path: url,
+        });
+      }
     };
 
     handleRouteChange(pathname); // Inicializar para la primera carga
@@ -39,14 +41,10 @@ export default function RootLayout({
   }, [pathname]);
 
   return (
-    <html lang='es'>
+    <html lang='en'>
       <head>
         <meta charSet='UTF-8' />
         <meta name='viewport' content='width=device-width, initial-scale=1.0' />
-        <link
-          rel='stylesheet'
-          href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css'
-        />
       </head>
       <body className={montserrat.className}>
         {children}
