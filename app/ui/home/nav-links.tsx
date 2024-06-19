@@ -8,13 +8,13 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 const links = [
-  { name: "About Us", href: "/about", icon: HomeIcon },
+  { name: "Home", href: "/#hero-section", icon: HomeIcon },
   {
-    name: "Contact",
-    href: "/contact",
+    name: "The program",
+    href: "/#program-section",
     icon: DocumentDuplicateIcon,
   },
-  { name: "Pricing", href: "/pricing", icon: UserGroupIcon },
+  { name: "Pricing", href: "/#pricing-section", icon: UserGroupIcon },
   { name: "History", href: "/history", icon: UserGroupIcon },
 ];
 

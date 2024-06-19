@@ -1,9 +1,12 @@
 import Particles from "./particles";
 import Link from "next/link";
 
-const AboutSection: React.FC = () => {
+const AboutSection: React.FC<{ id?: string }> = ({ id }) => {
   return (
-    <div className='relative min-h-screen flex flex-col items-center w-full justify-center overflow-hidden py-24 sm:py-32'>
+    <div
+      id={id}
+      className='relative min-h-screen flex flex-col items-center w-full justify-center overflow-hidden py-24 sm:py-32'
+    >
       <Particles
         className='absolute inset-0 z-[-1] bg-gradient-to-tl bg-white'
         quantity={400}
