@@ -14,7 +14,7 @@ const steps = [
       "De dónde vienes y hacia dónde vas",
     ],
     image:
-      "https://storage.googleapis.com/afterbootcamp/DALL%C2%B7E%202024-06-19%2021.15.45%20-%20A%20person%20standing%20triumphantly%20at%20the%20summit%20of%20a%20mountain%2C%20arms%20raised%20in%20victory.%20The%20background%20shows%20a%20breathtaking%20view%20from%20the%20mountain%20peak%2C%20s.webp",
+      "https://storage.googleapis.com/afterbootcamp/DALL%C2%B7E%202024-06-19%2021.15.42%20-%20A%20person%20standing%20at%20a%20starting%20line%20on%20a%20running%20track%2C%20ready%20to%20begin%20a%20race.%20The%20starting%20line%20is%20clearly%20marked%2C%20with%20the%20person%20in%20a%20focused%2C%20det.webp",
   },
   {
     title: "The Program",
@@ -34,7 +34,7 @@ const steps = [
       "Feedback y next steps",
     ],
     image:
-      "https://storage.googleapis.com/afterbootcamp/DALL%C2%B7E%202024-06-19%2021.15.42%20-%20A%20person%20standing%20at%20a%20starting%20line%20on%20a%20running%20track%2C%20ready%20to%20begin%20a%20race.%20The%20starting%20line%20is%20clearly%20marked%2C%20with%20the%20person%20in%20a%20focused%2C%20det.webp",
+      "https://storage.googleapis.com/afterbootcamp/DALL%C2%B7E%202024-06-19%2021.15.45%20-%20A%20person%20standing%20triumphantly%20at%20the%20summit%20of%20a%20mountain%2C%20arms%20raised%20in%20victory.%20The%20background%20shows%20a%20breathtaking%20view%20from%20the%20mountain%20peak%2C%20s.webp",
   },
 ];
 // TODO: Abstraer el componente StepComponent

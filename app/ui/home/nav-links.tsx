@@ -3,6 +3,7 @@ import {
   UserGroupIcon,
   HomeIcon,
   DocumentDuplicateIcon,
+  AcademicCapIcon,
 } from "@heroicons/react/24/outline";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -12,9 +13,9 @@ const links = [
   {
     name: "The program",
     href: "/#program-section",
-    icon: DocumentDuplicateIcon,
+    icon: AcademicCapIcon,
   },
-  { name: "Pricing", href: "/#pricing-section", icon: UserGroupIcon },
+  { name: "Pricing", href: "/#pricing-section", icon: DocumentDuplicateIcon },
   { name: "History", href: "/#history-section", icon: UserGroupIcon },
 ];
 

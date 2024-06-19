@@ -90,7 +90,7 @@ export default function ContactSales() {
         </h2>
         <p className='mt-2 text-lg leading-8 text-gray-600'>
           Completa el formulario para recibir más información sobre nuestras
-          mentorías personalizadas.
+          opciones personalizadas.
         </p>
       </div>
       <form

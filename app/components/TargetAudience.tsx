@@ -6,6 +6,7 @@ import {
 } from "@heroicons/react/24/outline";
 import Particles from "./particles";
 import ContactSales from "./ContactSales";
+
 const TargetAudience: React.FC<{ id?: string }> = ({ id }) => {
   return (
     <div
@@ -15,13 +16,13 @@ const TargetAudience: React.FC<{ id?: string }> = ({ id }) => {
       <Particles
         className='absolute inset-0 z-[-1] bg-gradient-to-tl bg-white'
         quantity={400}
-        rgba='rgba(255, 76, 76'
+        rgba='rgba(255, 76, 76, 0.5)'
       />
       <div className='mx-auto max-w-7xl text-center'>
-        <h2 className='text-base font-semibold leading-7 text-gray-900'>
+        <h2 className='text-lg font-semibold leading-7 text-gray-900 uppercase tracking-wider'>
           ¿Hacia quién va dirigido?
         </h2>
-        <h1 className='mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl'>
+        <h1 className='mt-2 text-4xl font-extrabold tracking-tight text-gray-900 sm:text-5xl'>
           Nuestro programa es para ti si...
         </h1>
         <div className='mt-10 grid gap-10 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3'>
@@ -30,43 +31,59 @@ const TargetAudience: React.FC<{ id?: string }> = ({ id }) => {
             <h3 className='mt-4 text-2xl font-bold text-gray-900'>
               Recientes Graduados de Bootcamp
             </h3>
-            <p className='mt-4 text-gray-700'>
-              Si has finalizado un bootcamp recientemente y estás trabajando o
-              en la búsqueda de empleo, nuestro programa puede ayudarte a
-              fortalecer tus habilidades y avanzar en tu carrera.
-            </p>
+            <ul className='mt-4 text-left text-gray-700 list-disc list-inside'>
+              <li>
+                Has completado un bootcamp recientemente y estás en búsqueda de
+                tu primer empleo o avanzando en tu carrera.
+              </li>
+              <li>
+                Deseas fortalecer tus habilidades técnicas con un enfoque
+                práctico y actualizado.
+              </li>
+              <li>Quieres destacar en el competitivo mercado laboral tech.</li>
+            </ul>
           </div>
           <div className='bg-medium-pink shadow-lg rounded-lg p-8 hover:bg-pink-500 transition-colors duration-300'>
             <BriefcaseIcon className='mx-auto h-12 w-12 text-gray-900' />
             <h3 className='mt-4 text-2xl font-bold text-gray-900'>
               Graduados de Grado Superior
             </h3>
-            <p className='mt-4 text-gray-700'>
-              Si has terminado un Grado Superior y estás trabajando o buscando
-              empleo, este programa te ayudará a consolidar tus conocimientos y
-              mejorar tu perfil profesional.
-            </p>
+            <ul className='mt-4 text-left text-gray-700 list-disc list-inside'>
+              <li>
+                Necesitas ayuda con tu Trabajo de Fin de Grado (TFG) y deseas
+                orientación especializada.
+              </li>
+              <li>
+                Estás trabajando o en busca de empleo y quieres consolidar tus
+                conocimientos.
+              </li>
+              <li>
+                Aspiras a mejorar tu perfil profesional y abrir nuevas
+                oportunidades laborales.
+              </li>
+            </ul>
           </div>
           <div className='bg-medium-pink shadow-lg rounded-lg p-8 hover:bg-pink-500 transition-colors duration-300'>
             <UserGroupIcon className='mx-auto h-12 w-12 text-gray-900' />
             <h3 className='mt-4 text-2xl font-bold text-gray-900'>
               Graduados Universitarios
             </h3>
-            <p className='mt-4 text-gray-700'>
-              Si has completado un grado universitario y estás trabajando o en
-              busca de trabajo, nuestro programa está diseñado para darte las
-              herramientas necesarias para destacar en el mercado laboral.
-            </p>
+            <ul className='mt-4 text-left text-gray-700 list-disc list-inside'>
+              <li>
+                Requieres apoyo con tu Trabajo de Fin de Máster (TFM) y buscas
+                mentoría personalizada.
+              </li>
+              <li>
+                Estás iniciando tu carrera profesional o buscando nuevas
+                oportunidades laborales.
+              </li>
+              <li>
+                Quieres adquirir herramientas prácticas para sobresalir en el
+                mercado laboral.
+              </li>
+            </ul>
           </div>
         </div>
-        {/* <div className='mt-12'>
-          <h2 className='text-2xl font-bold text-gray-900'>Testimonios</h2>
-          <p className='mt-4 text-gray-700'>
-            "El programa me ayudó a conseguir mi primer trabajo en tecnología.
-            Las mentorías personalizadas son increíbles."
-          </p>
-          <p className='mt-2 text-gray-900 font-semibold'>- María López</p>
-        </div> */}
         <div className='mt-12'>
           <ContactSales classNameButton='bg-medium-pink text-gray-900 px-3.5 py-2.5 text-sm font-semibold shadow-lg rounded-lg p-8 hover:bg-pink-500 transition-colors duration-300' />
         </div>
