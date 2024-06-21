@@ -14,7 +14,7 @@ export default function Head() {
         property='og:description'
         content='Grow your career with After Bootcamp'
       />
-      {/* <meta property='og:image' content='/path/to/image.jpg' /> */}
+      <meta property='og:image' content='/app/favicon.ico' />
       <meta property='og:url' content='https://afterbootcamp.es' />
       <meta name='twitter:card' content='summary_large_image' />
       <meta name='twitter:title' content='After Bootcamp' />
