@@ -15,7 +15,7 @@ const TargetAudience: React.FC<{ id?: string }> = ({ id }) => {
     >
       <Particles
         className='absolute inset-0 z-[-1] bg-gradient-to-tl bg-white'
-        quantity={400}
+        quantity={250}
         rgba='rgba(255, 76, 76, 0.5)'
       />
       <div className='mx-auto max-w-7xl text-center'>
