@@ -3,6 +3,7 @@
 import { useEffect } from "react";
 import { usePathname } from "next/navigation";
 import { Inter, Montserrat } from "next/font/google";
+import Head from "./head";
 import Script from "next/script";
 import "./globals.css";
 
@@ -42,28 +43,7 @@ export default function RootLayout({
 
   return (
     <html lang='en'>
-      <head>
-        <meta charSet='UTF-8' />
-        <meta name='viewport' content='width=device-width, initial-scale=1.0' />
-        <meta
-          name='keywords'
-          content='bootcamp, career growth, software development, devops'
-        />
-        <meta name='author' content='After Bootcamp' />
-        <meta property='og:title' content='After Bootcamp' />
-        <meta
-          property='og:description'
-          content='Grow your career with After Bootcamp'
-        />
-        <meta property='og:image' content='/app/favicon.ico' />
-        <meta property='og:url' content='https://afterbootcamp.es' />
-        <meta name='twitter:card' content='summary_large_image' />
-        <meta name='twitter:title' content='After Bootcamp' />
-        <meta
-          name='twitter:description'
-          content='Grow your career with After Bootcamp'
-        />
-      </head>
+      <Head />
       <body className={montserrat.className}>
         {children}
         <Script
