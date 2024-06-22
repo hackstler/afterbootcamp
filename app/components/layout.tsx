@@ -1,11 +1,10 @@
 import NavLinks from "../ui/home/nav-links";
 import Image from "next/image";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
-    <>
+    <div>
       <header className='absolute inset-x-0 top-0 z-1'>
         <nav
           className='flex items-center justify-between p-6 lg:px-8'
@@ -55,6 +54,6 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         </nav>
       </header>
       {children}
-    </>
+    </div>
   );
 }

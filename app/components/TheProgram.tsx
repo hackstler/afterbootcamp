@@ -4,6 +4,7 @@ import Particles from "./particles";
 import { useRouter } from "next/navigation";
 import { CheckCircleIcon } from "@heroicons/react/20/solid"; // Importar el ícono correcto de Heroicons v2
 import ContactSales from "./ContactSales";
+import Image from "next/image";
 
 const steps = [
   {
@@ -52,10 +53,12 @@ const StepComponent: React.FC<{ setOpenModal?: (open: boolean) => void }> = ({
           }`}
           onClick={() => setOpenModal && setOpenModal(true)}
         >
-          <img
+          <Image
             src={step.image}
             alt={step.title}
             className='w-full h-32 object-cover rounded-lg mb-4'
+            width={400}
+            height={200}
           />
           <h3 className='text-2xl font-bold'>{step.title}</h3>
           <div className='absolute inset-0 opacity-0 group-hover:opacity-75 transition-opacity rounded-lg'></div>

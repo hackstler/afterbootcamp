@@ -43,7 +43,7 @@ export default function CustomHead() {
   const metaUrl = "https://www.afterbootcamp.es/";
 
   return (
-    <>
+    <div>
       <Head>
         <title>{metaTitle}</title>
         <meta charSet='UTF-8' />
@@ -111,6 +111,6 @@ export default function CustomHead() {
             `,
         }}
       />
-    </>
+    </div>
   );
 }
