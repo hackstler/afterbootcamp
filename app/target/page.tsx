@@ -4,9 +4,5 @@ import Layout from "../components/layout";
 import TargetAudience from "../components/TargetAudience";
 
 export default function Home() {
-  return (
-    <Layout>
-      <TargetAudience />
-    </Layout>
-  );
+  return <TargetAudience />;
 }

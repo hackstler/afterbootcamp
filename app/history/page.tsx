@@ -4,9 +4,5 @@ import Layout from "../components/layout";
 import History from "../components/History";
 
 export default function Home() {
-  return (
-    <Layout>
-      <History />
-    </Layout>
-  );
+  return <History />;
 }

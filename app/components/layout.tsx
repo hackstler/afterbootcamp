@@ -1,15 +1,9 @@
-"use client";
-import { useState } from "react";
 import NavLinks from "../ui/home/nav-links";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 export default function Layout({ children }: { children: React.ReactNode }) {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const pathName = usePathname();
-  const textColor = pathName === "/pricing" ? "text-white" : "text-gray-900";
-
   return (
     <>
       <header className='absolute inset-x-0 top-0 z-50'>
@@ -32,7 +26,6 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             <button
               type='button'
               className='-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700'
-              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             >
               <span className='sr-only'>Open main menu</span>
               <svg
@@ -55,21 +48,11 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             <NavLinks />
           </div>
           <div className='hidden lg:flex lg:flex-1 lg:justify-end'>
-            <Link
-              href='/contact'
-              className={`text-sm font-semibold leading-6 ${textColor}`}
-            >
+            <Link href='/contact' className={`text-sm font-semibold leading-6`}>
               Start now <span aria-hidden='true'>→</span>
             </Link>
           </div>
         </nav>
-        {mobileMenuOpen && (
-          <div className='lg:hidden'>
-            <nav className='space-y-1 px-2 pt-2 pb-3 sm:px-3'>
-              <NavLinks />
-            </nav>
-          </div>
-        )}
       </header>
       {children}
     </>
