@@ -54,12 +54,15 @@ export default function CustomHead() {
         />
         <meta name='author' content='After Bootcamp' />
 
-        {/* Open Graph / Facebook */}
+        {/* Open Graph / Facebook / WhatsApp */}
         <meta property='og:title' content={metaTitle} />
         <meta property='og:description' content={metaDescription} />
         <meta property='og:image' content={metaImage} />
         <meta property='og:url' content={metaUrl} />
         <meta property='og:type' content='website' />
+        <meta property='og:site_name' content='After Bootcamp' />
+        <meta property='og:image:width' content='1200' />
+        <meta property='og:image:height' content='630' />
 
         {/* Twitter */}
         <meta name='twitter:card' content='summary_large_image' />
@@ -68,14 +71,10 @@ export default function CustomHead() {
         <meta name='twitter:title' content={metaTitle} />
         <meta name='twitter:description' content={metaDescription} />
         <meta name='twitter:image' content={metaImage} />
+        <meta name='twitter:image:alt' content='After Bootcamp Logo' />
+        <meta name='twitter:site' content='@YourTwitterUsername' />
 
         {/* LinkedIn */}
-        <meta property='og:title' content={metaTitle} />
-        <meta property='og:description' content={metaDescription} />
-        <meta property='og:image' content={metaImage} />
-        <meta property='og:url' content={metaUrl} />
-
-        {/* WhatsApp */}
         <meta property='og:title' content={metaTitle} />
         <meta property='og:description' content={metaDescription} />
         <meta property='og:image' content={metaImage} />
@@ -88,18 +87,11 @@ export default function CustomHead() {
         <meta property='og:url' content={metaUrl} />
 
         {/* Discord */}
-        <meta property='og:title' content={metaTitle} />
-        <meta property='og:description' content={metaDescription} />
-        <meta property='og:image' content={metaImage} />
-        <meta property='og:url' content={metaUrl} />
-
-        {/* Additional Meta Tags for WhatsApp */}
-        <meta name='og:image:width' content='1200' />
-        <meta name='og:image:height' content='630' />
-
-        {/* Additional Meta Tags for Discord */}
+        <meta name='twitter:card' content='summary_large_image' />
+        <meta property='twitter:title' content={metaTitle} />
+        <meta property='twitter:description' content={metaDescription} />
+        <meta property='twitter:image' content={metaImage} />
         <meta name='theme-color' content='#ffffff' />
-        <meta name='twitter:image:alt' content='After Bootcamp Logo' />
       </Head>
       <Script
         async
