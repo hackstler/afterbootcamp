@@ -92,6 +92,14 @@ export default function CustomHead() {
         <meta property='og:description' content={metaDescription} />
         <meta property='og:image' content={metaImage} />
         <meta property='og:url' content={metaUrl} />
+
+        {/* Additional Meta Tags for WhatsApp */}
+        <meta name='og:image:width' content='1200' />
+        <meta name='og:image:height' content='630' />
+
+        {/* Additional Meta Tags for Discord */}
+        <meta name='theme-color' content='#ffffff' />
+        <meta name='twitter:image:alt' content='After Bootcamp Logo' />
       </Head>
       <Script
         async
