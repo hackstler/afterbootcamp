@@ -39,7 +39,7 @@ export const ContactSales: React.FC<{
         return child;
       })
     : null;
-  // TODO: hacer refactor del formulario
+
   return (
     <>
       {clonedChildren ? (

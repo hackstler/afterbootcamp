@@ -51,13 +51,33 @@ export default function CustomHead() {
           property='og:description'
           content='Grow your career with After Bootcamp'
         />
-        {/* <meta property='og:image' content='/app/favicon.ico' /> */}
+        <meta
+          property='og:image'
+          content='https://storage.googleapis.com/afterbootcamp/openart-image_Zssjbb-I_1716376231201_raw.png'
+        />
         <meta property='og:url' content='https://www.afterbootcamp.es/' />
+        <meta property='og:type' content='website' />
+        <meta property='og:title' content='After Bootcamp' />
+        <meta
+          property='og:description'
+          content='Grow your career with After Bootcamp'
+        />
+        <meta
+          property='og:image'
+          content='https://storage.googleapis.com/afterbootcamp/openart-image_Zssjbb-I_1716376231201_raw.png'
+        />
+
         <meta name='twitter:card' content='summary_large_image' />
-        <meta name='twitter:title' content='After Bootcamp' />
+        <meta property='twitter:domain' content='afterbootcamp.es' />
+        <meta property='twitter:url' content='https://www.afterbootcamp.es/' />
+        <meta name='twitter:title' content='' />
         <meta
           name='twitter:description'
           content='Grow your career with After Bootcamp'
+        />
+        <meta
+          name='twitter:image'
+          content='https://storage.googleapis.com/afterbootcamp/openart-image_Zssjbb-I_1716376231201_raw.png'
         />
       </Head>
       <Script
