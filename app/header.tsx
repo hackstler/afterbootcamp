@@ -35,10 +35,17 @@ export default function CustomHead() {
       );
     };
   }, [pathname]);
+
+  const metaTitle = "After Bootcamp";
+  const metaDescription = "Grow your career with After Bootcamp";
+  const metaImage =
+    "https://storage.googleapis.com/afterbootcamp/openart-image_Zssjbb-I_1716376231201_raw.png";
+  const metaUrl = "https://www.afterbootcamp.es/";
+
   return (
     <>
       <Head>
-        <title>After Bootcamp</title>
+        <title>{metaTitle}</title>
         <meta charSet='UTF-8' />
         <meta name='viewport' content='width=device-width, initial-scale=1.0' />
         <meta
@@ -46,39 +53,45 @@ export default function CustomHead() {
           content='bootcamp, career growth, software development, devops, after bootcamp, afterbootcamp, afterbootcamp.es, seniority, developer, software engineer, software architect, tech lead, cto, career path, career development, career growth'
         />
         <meta name='author' content='After Bootcamp' />
-        <meta property='og:title' content='After Bootcamp' />
-        <meta
-          property='og:description'
-          content='Grow your career with After Bootcamp'
-        />
-        <meta
-          property='og:image'
-          content='https://storage.googleapis.com/afterbootcamp/openart-image_Zssjbb-I_1716376231201_raw.png'
-        />
-        <meta property='og:url' content='https://www.afterbootcamp.es/' />
-        <meta property='og:type' content='website' />
-        <meta property='og:title' content='After Bootcamp' />
-        <meta
-          property='og:description'
-          content='Grow your career with After Bootcamp'
-        />
-        <meta
-          property='og:image'
-          content='https://storage.googleapis.com/afterbootcamp/openart-image_Zssjbb-I_1716376231201_raw.png'
-        />
 
+        {/* Open Graph / Facebook */}
+        <meta property='og:title' content={metaTitle} />
+        <meta property='og:description' content={metaDescription} />
+        <meta property='og:image' content={metaImage} />
+        <meta property='og:url' content={metaUrl} />
+        <meta property='og:type' content='website' />
+
+        {/* Twitter */}
         <meta name='twitter:card' content='summary_large_image' />
         <meta property='twitter:domain' content='afterbootcamp.es' />
-        <meta property='twitter:url' content='https://www.afterbootcamp.es/' />
-        <meta name='twitter:title' content='' />
-        <meta
-          name='twitter:description'
-          content='Grow your career with After Bootcamp'
-        />
-        <meta
-          name='twitter:image'
-          content='https://storage.googleapis.com/afterbootcamp/openart-image_Zssjbb-I_1716376231201_raw.png'
-        />
+        <meta property='twitter:url' content={metaUrl} />
+        <meta name='twitter:title' content={metaTitle} />
+        <meta name='twitter:description' content={metaDescription} />
+        <meta name='twitter:image' content={metaImage} />
+
+        {/* LinkedIn */}
+        <meta property='og:title' content={metaTitle} />
+        <meta property='og:description' content={metaDescription} />
+        <meta property='og:image' content={metaImage} />
+        <meta property='og:url' content={metaUrl} />
+
+        {/* WhatsApp */}
+        <meta property='og:title' content={metaTitle} />
+        <meta property='og:description' content={metaDescription} />
+        <meta property='og:image' content={metaImage} />
+        <meta property='og:url' content={metaUrl} />
+
+        {/* Instagram */}
+        <meta property='og:title' content={metaTitle} />
+        <meta property='og:description' content={metaDescription} />
+        <meta property='og:image' content={metaImage} />
+        <meta property='og:url' content={metaUrl} />
+
+        {/* Discord */}
+        <meta property='og:title' content={metaTitle} />
+        <meta property='og:description' content={metaDescription} />
+        <meta property='og:image' content={metaImage} />
+        <meta property='og:url' content={metaUrl} />
       </Head>
       <Script
         async
