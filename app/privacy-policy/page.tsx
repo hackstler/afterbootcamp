@@ -102,9 +102,8 @@ const PrivacyPolicy: React.FC = () => {
         contactarnos a través de:
       </p>
       <ul className='list-disc list-inside mb-4'>
-        <li>Correo electrónico: info@afterbootcamp.com</li>
-        <li>Teléfono: [Número de teléfono]</li>
-        <li>Dirección: [Dirección de la empresa]</li>
+        <li>Correo electrónico: sergio@afterbootcamp.es</li>
+        <li>Teléfono: 699211701</li>
       </ul>
     </div>
   );
