@@ -5,8 +5,6 @@ import NavLinks from "../ui/home/nav-links";
 import Image from "next/image";
 import Link from "next/link";
 
-// force build
-
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -71,7 +69,7 @@ export default function Header() {
       {/* Mobile Menu */}
       {menuOpen && (
         <div
-          className='fixed inset-0 z-20 bg-white/10 backdrop-blur-lg -webkit-backdrop-blur-lg p-6 lg:hidden overflow-auto'
+          className='fixed inset-0 z-20  backdrop-blur-lg p-6 lg:hidden overflow-auto custom-backdrop-blur'
           id='mobile-menu'
         >
           <div className='flex justify-end'>
@@ -98,7 +96,7 @@ export default function Header() {
               </svg>
             </button>
           </div>
-          <div className='space-y-1 px-2 pt-2 pb-3 sm:px-3'>
+          <div className='space-y-6 px-4 pt-4 pb-6 sm:px-6'>
             <NavLinks closeMenu={handleCloseMenu} />
           </div>
         </div>

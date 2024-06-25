@@ -22,7 +22,8 @@
     "react-hook-form": "^7.51.5",
     "react-scroll": "^1.9.0",
     "react-slick": "^0.30.2",
-    "slick-carousel": "^1.8.1"
+    "slick-carousel": "^1.8.1",
+    "tailwindcss-filters": "^3.0.0"
   },
   "devDependencies": {
     "@types/node": "^20",

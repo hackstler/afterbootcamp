@@ -17,10 +17,16 @@ html {
   scroll-behavior: smooth;
 }
 
+
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
+}
+
+.custom-backdrop-blur {
+  -webkit-backdrop-filter: blur(16px);
+  backdrop-filter: blur(16px);
 }
 .bg-gradient-warm-to-soft {
   background-image: linear-gradient(to right, var(--tw-color-warm-red), var(--tw-color-soft-pink));

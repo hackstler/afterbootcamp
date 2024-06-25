@@ -1,6 +1,12 @@
 import type { Config } from "tailwindcss";
 
 const config: Config = {
+  variants: {
+    extend: {
+      backdropFilter: ["responsive"], // Habilita las variantes de responsive para backdropFilter
+      backdropBlur: ["responsive"], // Habilita las variantes de responsive para backdropBlur
+    },
+  },
   content: [
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
@@ -14,6 +20,8 @@ const config: Config = {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    require("tailwindcss-filters"), // Asegúrate de tener este plugin instalado
+  ],
 };
 export default config;
