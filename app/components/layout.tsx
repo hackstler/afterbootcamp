@@ -1,4 +1,4 @@
-import Header from "./Header";
+import Header from "./header";
 // force rebuild
 
 export default function Layout({ children }: { children: React.ReactNode }) {
