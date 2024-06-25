@@ -15,13 +15,13 @@ const links = [
     href: "/#program-section",
     icon: AcademicCapIcon,
   },
-  { name: "Pricing", href: "/#pricing-section", icon: DocumentDuplicateIcon },
+  { name: "Services", href: "/#services-section", icon: DocumentDuplicateIcon },
   { name: "History", href: "/#history-section", icon: UserGroupIcon },
 ];
 
 export default function NavLinks() {
   const pathName = usePathname();
-  const textColor = pathName === "/pricing" ? "text-white" : "text-gray-900";
+  const textColor = pathName === "/services" ? "text-white" : "text-gray-900";
   return (
     <>
       {links.map((link) => {

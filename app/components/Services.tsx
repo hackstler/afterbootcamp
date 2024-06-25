@@ -37,7 +37,7 @@ const plans = [
   },
 ];
 
-const PricingCarousel: React.FC<{ id?: string }> = ({ id }) => {
+const ServicesCarousel: React.FC<{ id?: string }> = ({ id }) => {
   return (
     <div
       id={id}
@@ -107,4 +107,4 @@ const PricingCarousel: React.FC<{ id?: string }> = ({ id }) => {
   );
 };
 
-export default PricingCarousel;
+export default ServicesCarousel;

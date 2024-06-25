@@ -64,7 +64,7 @@ const AboutSection: React.FC<{ id?: string }> = ({ id }) => {
                 habilidades en éxito profesional. ¡Empieza hoy! →
               </span>
             </Link>
-            <Link href='pricing' className='hover:text-gray-300'>
+            <Link href='services' className='hover:text-gray-300'>
               Unirse al Programa:{" "}
               <span aria-hidden='true'>
                 Únete hoy y comienza a construir tu futuro con nuestra guía

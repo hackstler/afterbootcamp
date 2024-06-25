@@ -4,7 +4,7 @@ import HeroSection from "./components/HeroSections";
 import AboutSection from "./components/AboutSection";
 import Layout from "./components/layout";
 import BriefHistory from "./components/BriefHistory";
-import Pricing from "./components/Pricing";
+import Services from "./components/Services";
 import ContactSales from "./components/ContactSales";
 import TheProgram from "./components/TheProgram";
 import TargetAudience from "./components/TargetAudience";
@@ -16,7 +16,7 @@ export default function Home() {
       <BriefHistory id='history-section' />
       <TheProgram id='program-section' />
       <TargetAudience id='audience-section' />
-      <Pricing id='pricing-section' />
+      <Services id='services-section' />
     </div>
   );
 }
