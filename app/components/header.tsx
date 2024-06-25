@@ -71,7 +71,7 @@ export default function Header() {
       {/* Mobile Menu */}
       {menuOpen && (
         <div
-          className='fixed inset-0 z-20 bg-opacity-90 backdrop-blur p-6 lg:hidden overflow-auto'
+          className='fixed inset-0 z-20 backdrop-blur-lg -webkit-backdrop-blur-lg p-6 lg:hidden overflow-auto'
           id='mobile-menu'
         >
           <div className='flex justify-end'>
