@@ -18,6 +18,9 @@ const ThankYou: React.FC = () => {
         <p className='mt-2 text-center text-sm text-gray-600'>
           ¡Gracias por contactarnos! Nos pondremos en contacto contigo pronto.
         </p>
+        <p className='mt-2 text-center text-sm text-gray-600'>
+          Revisa tu bandeja de entrada/spam para más información.
+        </p>
         <div className='mt-6'>
           <button
             onClick={handleBackToHome}

@@ -1,4 +1,5 @@
 import Image from "next/image";
+import ContactSales from "@/app/components/ContactSales";
 export default function History() {
   return (
     <div className='relative isolate overflow-hidden bg-white px-6 py-24 sm:py-32 lg:overflow-visible lg:px-0'>
@@ -60,7 +61,7 @@ export default function History() {
             <div className='max-w-xl text-base leading-7 text-gray-700 lg:max-w-lg'>
               <section className='mb-8'>
                 <h2 className='text-2xl font-bold mb-4'>El Comienzo</h2>
-                <p>
+                <p className='text-justify'>
                   <span className='font-bold'>Soy Sergio, tengo 28 años</span> y
                   aunque no cuento con formación reglada, soy un desarrollador
                   de software y DevOps apasionado. Hoy quiero compartir mi
@@ -68,7 +69,7 @@ export default function History() {
                   éxito que espero te inspire a seguir tus sueños, sin importar
                   los obstáculos.
                 </p>
-                <p>
+                <p className='text-justify'>
                   Hace unos años, me encontraba trabajando en un cine. Llevaba
                   dos años en ese empleo, pero{" "}
                   <span className='font-bold'>
@@ -87,7 +88,7 @@ export default function History() {
                 <h2 className='text-2xl font-bold mb-4'>
                   El Desafío del Bootcamp
                 </h2>
-                <p>
+                <p className='text-justify'>
                   Había estado coqueteando con la programación por un tiempo,
                   pero nunca me había sumergido por completo. Decidí lanzarme y,
                   para mi sorpresa, fui aceptado en el bootcamp.{" "}
@@ -105,7 +106,7 @@ export default function History() {
                     <h2 className='text-2xl font-bold mb-4'>
                       Encontrando Mentores y Creciendo
                     </h2>
-                    <p>
+                    <p className='text-justify'>
                       En el bootcamp, conocí a uno de mis mentores y futuro
                       socio, una de las personas con las que más rápidamente he
                       crecido. Tener su apoyo fue crucial para mí.{" "}
@@ -117,7 +118,7 @@ export default function History() {
                       apoyo, en poco tiempo, me posicioné como un desarrollador
                       completo y versátil.
                     </p>
-                    <p>
+                    <p className='text-justify'>
                       Pero no fue solo uno; he tenido la suerte de contar con
                       varios mentores a lo largo de mi carrera, y a todos ellos
                       les estoy profundamente agradecido.{" "}
@@ -135,7 +136,7 @@ export default function History() {
                     <h2 className='text-2xl font-bold mb-4'>
                       Expandiendo Horizontes
                     </h2>
-                    <p>
+                    <p className='text-justify'>
                       Pronto me di cuenta de que un desarrollador de software no
                       puede limitarse solo a programar. Necesita tener una{" "}
                       <span className='font-bold'>
@@ -146,7 +147,7 @@ export default function History() {
                       amplia del mundo tech y complementó mi perfil de manera
                       significativa.
                     </p>
-                    <p>
+                    <p className='text-justify'>
                       Continué formándome con diferentes cursos y siguiendo los
                       pasos de mis mentores. Finalmente, después de solo cuatro
                       años desde que empecé a programar,{" "}
@@ -164,7 +165,7 @@ export default function History() {
                 <h2 className='text-2xl font-bold mb-4'>
                   El Compromiso con el Futuro
                 </h2>
-                <p>
+                <p className='text-justify'>
                   El mundo tech es complejo y siempre está en constante cambio.
                   Adaptarse puede ser difícil y pueden surgir problemas como el
                   síndrome del impostor, el burnout y la incertidumbre
@@ -176,7 +177,7 @@ export default function History() {
                   necesarios para que otros puedan evolucionar en sus carreras
                   tech sin morir en el intento.
                 </p>
-                <p>
+                <p className='text-justify'>
                   En AfterBootcamp, mi objetivo es ayudarte a crecer en tu
                   carrera tech. He estado en tu lugar, he enfrentado los mismos
                   retos y sé lo que se necesita para alcanzar el éxito.{" "}
@@ -191,6 +192,7 @@ export default function History() {
           </div>
         </div>
       </div>
+      <ContactSales classNameButton='mt-4 inline-flex items-center rounded-md border border-transparent bg-medium-red px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2' />
     </div>
   );
 }
