@@ -73,7 +73,7 @@ const BriefHistory: React.FC<{ id?: string }> = ({ id }) => {
             <div className='max-w-xl text-base leading-7 text-gray-700 lg:max-w-lg'>
               <section className='mb-8'>
                 <h2 className='text-2xl font-bold mb-4'>El Comienzo</h2>
-                <p>
+                <p className='text-justify'>
                   <span className='font-bold'>Soy Sergio, tengo 28 años</span> y
                   aunque no cuento con formación reglada, soy un desarrollador
                   de software y DevOps apasionado. Hace unos años, me encontraba
@@ -84,7 +84,7 @@ const BriefHistory: React.FC<{ id?: string }> = ({ id }) => {
                   . Además, tenía varios préstamos que sumaban varios miles de
                   euros, lo que añadía una gran presión a mi vida.
                 </p>
-                <p>
+                <p className='text-justify'>
                   Fue entonces cuando, navegando en InfoJobs, encontré una
                   oportunidad que cambiaría mi vida: un bootcamp de
                   programación...
