@@ -47,6 +47,7 @@ export default function RootLayout({
   return (
     <html lang='es'>
       <Layout>
+        <SpeedInsights />
         <body className={montserrat.className}>{children}</body>
       </Layout>
     </html>
