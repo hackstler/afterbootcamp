@@ -8,6 +8,8 @@ import Link from "next/link";
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
 
+  const handleCloseMenu = () => setMenuOpen(false);
+
   return (
     <header className='absolute inset-x-0 top-0 z-10'>
       <nav
@@ -52,7 +54,7 @@ export default function Header() {
           </button>
         </div>
         <div className='hidden lg:flex lg:gap-x-12'>
-          <NavLinks />
+          <NavLinks closeMenu={handleCloseMenu} />
         </div>
         <div className='hidden lg:flex lg:flex-1 lg:justify-end'>
           <Link
@@ -66,8 +68,37 @@ export default function Header() {
 
       {/* Mobile Menu */}
       {menuOpen && (
-        <div className='lg:hidden' id='mobile-menu'>
-          <NavLinks />
+        <div
+          className='fixed inset-0 z-20 bg-opacity-75 backdrop-blur-lg p-6 lg:hidden overflow-auto'
+          id='mobile-menu'
+        >
+          <div className='flex justify-end'>
+            <button
+              type='button'
+              className='inline-flex items-center justify-center rounded-md p-2.5 text-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500'
+              onClick={handleCloseMenu}
+            >
+              <span className='sr-only'>Close main menu</span>
+              <svg
+                className='block h-6 w-6'
+                xmlns='http://www.w3.org/2000/svg'
+                fill='none'
+                viewBox='0 0 24 24'
+                stroke='currentColor'
+                aria-hidden='true'
+              >
+                <path
+                  strokeLinecap='round'
+                  strokeLinejoin='round'
+                  strokeWidth='2'
+                  d='M6 18L18 6M6 6l12 12'
+                />
+              </svg>
+            </button>
+          </div>
+          <div className='space-y-1 px-2 pt-2 pb-3 sm:px-3'>
+            <NavLinks closeMenu={handleCloseMenu} />
+          </div>
         </div>
       )}
     </header>

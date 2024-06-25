@@ -19,7 +19,7 @@ const links = [
   { name: "History", href: "/#history-section", icon: UserGroupIcon },
 ];
 
-export default function NavLinks() {
+export default function NavLinks({ closeMenu }: { closeMenu: () => void }) {
   const pathName = usePathname();
   const textColor = pathName === "/services" ? "text-white" : "text-gray-900";
   return (
@@ -31,6 +31,7 @@ export default function NavLinks() {
             key={link.name}
             href={link.href}
             className={`text-sm font-semibold leading-6 ${textColor} flex items-center gap-2`}
+            onClick={closeMenu}
           >
             <LinkIcon className='h-5 w-5' />
             <span>{link.name}</span>
