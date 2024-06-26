@@ -107,11 +107,11 @@ export default function History() {
                       Encontrando Mentores y Creciendo
                     </h2>
                     <p className='text-justify'>
-                      En el bootcamp, conocí a uno de mis mentores y futuro
-                      socio, una de las personas con las que más rápidamente he
-                      crecido. Tener su apoyo fue crucial para mí.{" "}
+                      En el bootcamp, conocí no solo a uno sino a dos de mis
+                      futuros socios, las personas con las que más rápidamente
+                      he crecido. Tener su apoyo fue crucial para mí.{" "}
                       <span className='font-bold'>
-                        Me proporcionó una guía constante, validación en cada
+                        Me proporcionaron una guía constante, validación en cada
                         paso que daba
                       </span>{" "}
                       y me ayudó a seguir el camino correcto. Gracias a este
@@ -119,7 +119,7 @@ export default function History() {
                       completo y versátil.
                     </p>
                     <p className='text-justify'>
-                      Pero no fue solo uno; he tenido la suerte de contar con
+                      Pero no solo fueron dos; he tenido la suerte de contar con
                       varios mentores a lo largo de mi carrera, y a todos ellos
                       les estoy profundamente agradecido.{" "}
                       <span className='font-bold'>

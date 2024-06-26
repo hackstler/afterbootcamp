@@ -5,6 +5,8 @@ const config: Config = {
     extend: {
       backdropFilter: ["responsive"], // Habilita las variantes de responsive para backdropFilter
       backdropBlur: ["responsive"], // Habilita las variantes de responsive para backdropBlur
+      backgroundColor: ["responsive", "hover", "focus", "active"],
+      boxShadow: ["responsive", "hover", "focus"],
     },
   },
   content: [

@@ -30,7 +30,7 @@ export default function NavLinks({ closeMenu }: { closeMenu: () => void }) {
           <Link
             key={link.name}
             href={link.href}
-            className={`text-sm font-semibold leading-6 ${textColor} flex items-center gap-2`}
+            className={`text-sm font-semibold leading-6 ${textColor} flex items-center gap-2 p-4 sm:p-0 sm:shadow-none sm:hover:bg-transparent sm:hover:shadow-none hover:bg-gray-300 hover:shadow-xl rounded-md transition`}
             onClick={closeMenu}
           >
             <LinkIcon className='h-5 w-5' />
