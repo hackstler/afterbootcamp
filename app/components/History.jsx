@@ -1,5 +1,6 @@
 import Image from "next/image";
 import ContactSales from "@/app/components/ContactSales";
+
 export default function History() {
   return (
     <div className='relative isolate overflow-hidden bg-white px-6 py-24 sm:py-32 lg:overflow-visible lg:px-0'>
@@ -192,7 +193,9 @@ export default function History() {
           </div>
         </div>
       </div>
-      <ContactSales classNameButton='mt-4 inline-flex items-center rounded-md border border-transparent bg-medium-red px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2' />
+      <div className='flex justify-center lg:justify-center mt-12'>
+        <ContactSales classNameButton='inline-flex items-center rounded-md border border-transparent bg-medium-red px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2' />
+      </div>
     </div>
   );
 }
