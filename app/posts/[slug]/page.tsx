@@ -19,18 +19,19 @@ export default async function Post({ params }: Params) {
   const content = await markdownToHtml(post.content || "");
 
   return (
-    <Container>
-      <Header />
-      <article className='mb-32'>
-        <PostHeader
-          title={post.title}
-          coverImage={post.coverImage}
-          date={post.date}
-          author={post.author}
-        />
-        <PostBody content={content} />
-      </article>
-    </Container>
+    <div className='flex flex-col items-center justify-center w-full p-full overflow-x-hidden bg-gray-900'>
+      <Container>
+        <article className='mb-32'>
+          <PostHeader
+            title={post.title}
+            coverImage={post.coverImage}
+            date={post.date}
+            author={post.author}
+          />
+          <PostBody content={content} />
+        </article>
+      </Container>
+    </div>
   );
 }
 
