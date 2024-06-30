@@ -20,6 +20,7 @@ export default async function Post({ params }: Params) {
 
   return (
     <div className='flex flex-col items-center justify-center w-full p-full overflow-x-hidden bg-gray-900'>
+      <Header />
       <Container>
         <article className='mb-32'>
           <PostHeader
