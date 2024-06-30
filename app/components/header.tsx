@@ -4,9 +4,21 @@ import { useState } from "react";
 import NavLinks from "../ui/home/nav-links";
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
+
+const checkButtonColor = (pathName: string) => {
+  console.log(pathName.includes("posts"));
+  if (pathName.includes("services")) return "text-white";
+  if (pathName.includes("blog")) return "text-medium-pink";
+  if (pathName.includes("posts")) return "text-white";
+
+  return "text-gray-900";
+};
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const pathName = usePathname();
+  const textColor = checkButtonColor(pathName);
 
   const handleCloseMenu = () => setMenuOpen(false);
 
@@ -59,7 +71,7 @@ export default function Header() {
         <div className='hidden lg:flex lg:flex-1 lg:justify-end'>
           <Link
             href='/contact'
-            className='text-sm font-semibold leading-6 text-gray-900 hover:text-gray-700'
+            className={`text-sm font-semibold leading-6 ${textColor} hover:text-medmium-pink`}
           >
             Start now <span aria-hidden='true'>→</span>
           </Link>
@@ -75,7 +87,7 @@ export default function Header() {
           <div className='flex justify-end'>
             <button
               type='button'
-              className='inline-flex items-center justify-center rounded-md p-2.5 text-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500'
+              className={`inline-flex items-center justify-center rounded-md p-2.5 ${textColor} focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500`}
               onClick={handleCloseMenu}
             >
               <span className='sr-only'>Close main menu</span>

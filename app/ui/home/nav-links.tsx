@@ -19,7 +19,7 @@ const links = [
   { name: "History", href: "/#history-section", icon: UserGroupIcon },
 ];
 
-const checkItemsColor = (pathName: string) => {
+export const checkItemsColor = (pathName: string) => {
   console.log(pathName.includes("posts"));
   if (pathName.includes("services")) return "text-white";
   if (pathName.includes("blog")) return "text-black";
@@ -30,7 +30,6 @@ const checkItemsColor = (pathName: string) => {
 
 export default function NavLinks({ closeMenu }: { closeMenu: () => void }) {
   const pathName = usePathname();
-  console.log("🚀 ~ NavLinks ~ pathName:", pathName);
   const textColor = checkItemsColor(pathName);
   return (
     <>

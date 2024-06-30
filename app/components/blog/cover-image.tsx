@@ -1,6 +1,7 @@
 import cn from "classnames";
 import Link from "next/link";
 import Image from "next/image";
+import { Suspense } from "react";
 
 type Props = {
   title: string;
@@ -18,17 +19,25 @@ const CoverImage = ({ title, src, slug }: Props) => {
       })}
       width={1300}
       height={630}
+      loading='lazy' // Habilita el lazy loading
     />
   );
+
   return (
-    <div className="sm:mx-0">
-      {slug ? (
-        <Link href={`/posts/${slug}`} aria-label={title}>
-          {image}
-        </Link>
-      ) : (
-        image
-      )}
+    <div className='sm:mx-0'>
+      <Suspense
+        fallback={
+          <div className='w-full h-[630px] bg-gray-200 animate-pulse'></div>
+        }
+      >
+        {slug ? (
+          <Link href={`/posts/${slug}`} aria-label={title}>
+            {image}
+          </Link>
+        ) : (
+          image
+        )}
+      </Suspense>
     </div>
   );
 };

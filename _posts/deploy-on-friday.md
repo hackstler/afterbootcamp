@@ -30,4 +30,4 @@ Al final, no pasó nada relevante, se almacenaron las peticiones de ventas y al 
 
 ### Moraleja
 
-Este incidente me enseñó la importancia de no automatizar respuestas sin pensar y siempre revisar los comandos que ejecutamos, especialmente en producción. La automatización es clave para la eficiencia, pero sin la atención adecuada al detalle, puede llevar a errores críticos. Siempre hay que mantener un equilibrio entre la rapidez y la precisión en nuestras acciones diarias.
+Este incidente me enseñó la importancia de no automatizar respuestas sin pensar y siempre revisar los comandos que ejecutamos, especialmente en producción. Por otra parte automatización en tecnologia es clave para la eficiencia, si el proceso de subida hubise estado automatizado nos hubiesemos ahorrado un buen susto.. ya que los procesos manuales dependen de un humano, con muchas variables y puede llevar a situaciones críticass. Siempre hay que mantener un equilibrio entre la rapidez y la precisión en nuestras acciones diarias.

@@ -12,14 +12,14 @@ ogImage:
 
 # La Secretaria del CEO
 
-En mi primer trabajo, una gran parte del equipo era internacional. Mi inglés nunca ha sido el mejor, y la secretaria del CEO no entendía nada de español. La barrera idiomática siempre fue un reto.
+Imagínate esto: mi primer trabajo como full stack developer, un equipo lleno de personas de todo el mundo y mi inglés... bueno, digamos que no era el mejor. Y para añadirle un poco de drama, la secretaria del CEO no entendía ni una palabra de español.
 
-Un día, mientras estaba solo en la oficina, recibí un email de la secretaria. Necesitaba ayuda urgente para crear un Excel para el CEO. Sentí un nudo en el estómago. No solo mi inglés era limitado, sino que también tenía poca idea de cómo usar Excel.
+Un día, estaba solo en la oficina, disfrutando de mi café mañanero, cuando recibí un email de la secretaria. Necesitaba ayuda urgente para crear un Excel para el CEO. Sentí un nudo en el estómago. No solo mi inglés era limitado, sino que también Excel y yo no éramos precisamente mejores amigos.
 
-A pesar de mis inseguridades, acepté ayudarla. Nos conectamos en una videollamada y, entre frases sueltas y mucha gesticulación, entendí que necesitaba crear campos condicionales en Excel. Hice una búsqueda rápida en Google y encontré un tutorial que le pasé directamente, sin poder explicárselo bien.
+Pero bueno, con "quien tenga miedo a morir que no nazca" como filosofía de vida, acepté ayudarla. Nos conectamos en una videollamada y, entre frases inconexas, una actuación digna de DiCaprio y mucha paciencia, logré entender que necesitaba crear campos condicionales en Excel. Hice una búsqueda rápida en Google sin ningún tipo de esperanza y, buscando cobre, ¡encontré oro! Encontré un tutorial que le pasé directamente. No podía explicárselo muy bien, pero desde luego solucionó su problema.
 
-Para mi sorpresa, ella se mostró muy agradecida y aliviada. Lo que para mí fue una solución desesperada, para ella fue exactamente lo que necesitaba. Resolver el problema me dejó una sensación de logro inesperada.
+Para mi sorpresa, ella se mostró súper agradecida y aliviada. Lo que para mí fue un intento desesperado por ayudar, para ella fue exactamente lo que necesitaba. ¡Misión cumplida!
 
 ### Reflexión
 
-Esta experiencia me enseñó que, a veces, lo importante no es tener todas las respuestas, sino estar dispuesto a intentar y encontrar soluciones. La comunicación puede ser un desafío, pero la disposición para ayudar y la creatividad para resolver problemas son invaluables.
+Esta experiencia me enseñó algo muy valioso: no siempre se trata de tener todas las respuestas, sino de estar dispuesto a intentar y encontrar soluciones. La comunicación puede ser complicada, pero la disposición para ayudar y la creatividad para resolver problemas son invaluables. Y quién sabe, tal vez con un poco de gesticulación y Google, podamos resolver más de lo que pensamos. Y para terminar, lanzo una pregunta: ¿entraba dentro de mi rol ayudar a la secretaria del CEO con su Excel?
