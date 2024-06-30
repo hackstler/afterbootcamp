@@ -4,10 +4,10 @@ excerpt: "Una historia sobre cómo un error en el deploy llevó a una lección i
 coverImage: "https://storage.googleapis.com/afterbootcamp/image.webp"
 date: "2020-03-16T05:35:07.322Z"
 author:
-  name: "Sergio Pérez"
+  name: "Sergio Hackstler"
   picture: "https://storage.googleapis.com/afterbootcamp/WhatsApp%20Image%202024-06-30%20at%2023.28.13.jpeg"
 ogImage:
-  url: "/assets/blog/deploy-desastroso/cover.jpg"
+  url: "https://www.linkedin.com/in/sergio-hackstler/"
 ---
 
 # Deploy desastroso el viernes y la importancia de automatizar

@@ -4,10 +4,10 @@ excerpt: "Una experiencia que me enseñó la importancia de la comunicación y l
 coverImage: "https://storage.googleapis.com/afterbootcamp/image.webp"
 date: "2024-06-27T05:35:07.322Z"
 author:
-  name: Sergio Metra
+  name: Sergio Hackstler
   picture: "https://storage.googleapis.com/afterbootcamp/WhatsApp%20Image%202024-06-30%20at%2023.28.13.jpeg"
 ogImage:
-  url: "/assets/blog/secretaria-ceo/cover.jpg"
+  url: "https://www.linkedin.com/in/sergio-hackstler/"
 ---
 
 # La Secretaria del CEO
