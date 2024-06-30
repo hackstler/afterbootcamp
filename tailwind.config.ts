@@ -19,6 +19,8 @@ const config: Config = {
       colors: {
         "medium-red": "#FF4C4C", // Un rojo más moderado
         "medium-pink": "#FFA6C9", // Un rosa medio, no tan brillante pero alegre
+        primary: "#f3c614", // Ejemplo de color principal de aferbootcamp.es
+        secondary: "#0e2f44", // Ejemplo de color secundario
       },
     },
   },
