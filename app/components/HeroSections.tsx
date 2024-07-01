@@ -1,4 +1,3 @@
-"use client";
 import Particles from "./particles";
 import Link from "next/link";
 import ContactSales from "./ContactSales";
@@ -16,16 +15,19 @@ const HeroSection: React.FC<{ id?: string }> = ({ id }) => {
         rgba='rgba(255, 255, 255'
       />
 
-      <div className='hidden sm:mb-8 sm:flex sm:justify-center'></div>
       <h1 className='text-4xl font-bold tracking-tight text-white sm:text-6xl'>
         Impulsa tu Carrera con Afterbootcamp
       </h1>
 
-      <p className='mt-6 text-xl leading-8 text-gray-200'>
+      <p className=' flex items-center justify-center mt-6 text-xl leading-8 text-gray-200 text-center'>
         Transforma tu experiencia post-formación en éxito profesional con
-        mentoría personalizada de expertos Full Stack.
+        mentoría personalizada de expertos Full Stack. Accede a recursos
+        exclusivos diseñados para tu crecimiento, fortalece las habilidades más
+        demandadas para avanzar en tu carrera o realiza tus proyecto con nuestra
+        ayuda.
       </p>
-      <div className='mt-10 mb-14 flex items-center justify-center gap-x-6'>
+
+      <div className='mt-10 mb-14 flex flex-col items-center justify-center gap-y-4'>
         <ContactSales classNameButton='rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold text-medium-red shadow-sm hover:bg-gray-900' />
       </div>
     </div>
