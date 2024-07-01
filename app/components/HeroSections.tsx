@@ -23,7 +23,7 @@ const HeroSection: React.FC<{ id?: string }> = ({ id }) => {
         Transforma tu experiencia post-formación en éxito profesional con
         mentoría personalizada de expertos Full Stack. Accede a recursos
         exclusivos diseñados para tu crecimiento, fortalece las habilidades más
-        demandadas para avanzar en tu carrera o realiza tus proyecto con nuestra
+        demandadas para avanzar en tu carrera o lanza tus proyectos con nuestra
         ayuda.
       </p>
 
