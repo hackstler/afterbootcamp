@@ -23,7 +23,7 @@ const links = [
 export const checkItemsColor = (pathName: string) => {
   console.log(pathName.includes("posts"));
   if (pathName.includes("services")) return "text-white";
-  if (pathName.includes("blog")) return "text-medium-pink";
+  if (pathName.includes("blog")) return "text-black";
   if (pathName.includes("posts")) return "text-white";
 
   return "text-gray-900";
