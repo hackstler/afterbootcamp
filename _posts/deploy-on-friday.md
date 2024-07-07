@@ -1,5 +1,5 @@
 ---
-title: "Deploy un viernes: la importancia de automatizar"
+title: "Deploy un viernes: la importancia de automatizar..."
 excerpt: "Una historia sobre cómo un error en el deploy llevó a una lección importante sobre la automatización y la atención al detalle."
 coverImage: "https://storage.googleapis.com/afterbootcamp/fidaydalle.webp"
 date: "2020-01-17T05:35:07.322Z"
@@ -10,7 +10,7 @@ ogImage:
   url: "https://www.linkedin.com/in/sergio-hackstler/"
 ---
 
-# Deploy un viernes: la importancia de automatizar
+# Deploy un viernes: la importancia de automatizar...
 
 Un **viernes** habíamos quedado todo el equipo de la empresa donde trabajaba para comer y después tomar unas cervezas. Yo, además de trabajar como desarrollador web, estaba haciendo un bootcamp full stack DevOps, por lo que iba **a mil**.
 

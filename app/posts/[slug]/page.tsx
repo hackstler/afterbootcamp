@@ -19,11 +19,9 @@ export default async function Post({ params }: Params) {
   const content = await markdownToHtml(post.content || "");
 
   return (
-    <div className='flex flex-col items-center justify-center w-full p-full overflow-x-hidden bg-gray-900'>
+    <div className='bg-gray-900 min-h-screen flex flex-col'>
       <Container>
-        <article className='mb-32 mt-20'>
-          {" "}
-          {/* Añadir margen superior */}
+        <article className=' mt-20 max-w-3xl mx-auto mb-32 px-5'>
           <PostHeader
             title={post.title}
             coverImage={post.coverImage}

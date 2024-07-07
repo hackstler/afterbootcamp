@@ -1,5 +1,5 @@
 ---
-title: "Superando Barreras con la Secretaria del CEO"
+title: "Superando Barreras con la Secretaria del CEO..."
 excerpt: "Una experiencia que me enseñó la importancia de la comunicación y la resolución de problemas en el trabajo, incluso con barreras idiomáticas."
 coverImage: "https://storage.googleapis.com/afterbootcamp/exceldalle2.webp"
 date: "2019-11-21T05:35:07.322Z"
@@ -10,7 +10,7 @@ ogImage:
   url: "https://www.linkedin.com/in/sergio-hackstler/"
 ---
 
-# Superando Barreras con la Secretaria del CEO
+# Superando Barreras con la Secretaria del CEO...
 
 Imagínate esto: **mi primer trabajo** como full stack developer, un equipo lleno de personas de todo el mundo y mi inglés... bueno, digamos que **no era el mejor**. Y para añadirle un poco de drama, la **secretaria del CEO** no entendía ni una palabra de español.
 

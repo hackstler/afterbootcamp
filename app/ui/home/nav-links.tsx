@@ -4,12 +4,13 @@ import {
   HomeIcon,
   DocumentDuplicateIcon,
   AcademicCapIcon,
+  ChatBubbleLeftEllipsisIcon,
 } from "@heroicons/react/24/outline";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 const links = [
-  { name: "Home", href: "/#hero-section", icon: HomeIcon },
+  { name: "Blog", href: "/blog", icon: ChatBubbleLeftEllipsisIcon },
   {
     name: "The program",
     href: "/#program-section",
@@ -22,7 +23,7 @@ const links = [
 export const checkItemsColor = (pathName: string) => {
   console.log(pathName.includes("posts"));
   if (pathName.includes("services")) return "text-white";
-  if (pathName.includes("blog")) return "text-black";
+  if (pathName.includes("blog")) return "text-medium-pink";
   if (pathName.includes("posts")) return "text-white";
 
   return "text-gray-900";

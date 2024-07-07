@@ -14,17 +14,17 @@ const CoverImage = ({ title, src, slug }: Props) => {
     <Image
       src={src}
       alt={`Cover Image for ${title}`}
-      className={cn("shadow-sm w-full", {
+      className={cn("shadow-sm w-full max-h-svh", {
         "hover:shadow-lg transition-shadow duration-200": slug,
       })}
       width={1300}
-      height={630}
-      loading='lazy' // Habilita el lazy loading
+      height={630} // Ajustamos la altura aquí
+      loading='lazy'
     />
   );
 
   return (
-    <div className='sm:mx-0'>
+    <div className='sm:mx-0 max-h-min'>
       <Suspense
         fallback={
           <div className='w-full h-[630px] bg-gray-200 animate-pulse'></div>
