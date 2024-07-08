@@ -19,7 +19,7 @@ export default async function Post({ params }: Params) {
   const content = await markdownToHtml(post.content || "");
 
   return (
-    <div className='bg-gray-900 min-h-screen flex flex-col'>
+    <div className='bg-gray-900 text-white min-h-screen flex flex-col'>
       <Container>
         <article className=' mt-20 max-w-3xl mx-auto mb-32 px-5'>
           <PostHeader

@@ -1,5 +1,5 @@
 ---
-title: "Superando Barreras con la Secretaria del CEO..."
+title: "El Código Excel: Superando Barreras"
 excerpt: "Una experiencia que me enseñó la importancia de la comunicación y la resolución de problemas en el trabajo, incluso con barreras idiomáticas."
 coverImage: "https://storage.googleapis.com/afterbootcamp/exceldalle2.webp"
 date: "2019-11-21T05:35:07.322Z"

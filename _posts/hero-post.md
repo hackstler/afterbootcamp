@@ -1,5 +1,5 @@
 ---
-title: "El Precio de la Ambición: Una Lección de Integridad en el Trabajo"
+title: "El Precio de la Ambición"
 excerpt: "Una experiencia que me enseñó que la integridad y los valores personales no deben comprometerse, incluso en la búsqueda del crecimiento profesional."
 coverImage: "https://storage.googleapis.com/afterbootcamp/openart-94240f49fe554c53a48423c41ce458f1_raw.jpg"
 date: "2021-04-03T12:00:00.000Z"
@@ -10,7 +10,7 @@ ogImage:
   url: "https://www.linkedin.com/in/sergio-hackstler/"
 ---
 
-# El Precio de la Ambición: Una Lección de Integridad en el Trabajo
+# El Precio de la Ambición
 
 Desde que tengo uso de razón, he sido **ambicioso**. Si tenía uno, quería dos. Si tenía dos, quería tres. Esta **ambición constante** me ha impulsado a nunca dejar de crecer. Sin embargo, esta misma ambición me ha llevado a enfrentar **momentos difíciles** y a veces me he preguntado por qué soy así. Podría optar por la tranquilidad de no arriesgarme, pero esa pasividad me consume por dentro. Es como si me faltara una parte esencial de mí mismo.
 

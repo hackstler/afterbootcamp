@@ -12,7 +12,7 @@ export default function Index() {
   const morePosts = allPosts.slice(1);
 
   return (
-    <div className='bg-gray-900 flex flex-col items-center justify-center w-full p-full overflow-x-hidden'>
+    <div className='bg-gray-900 text-white flex flex-col items-center justify-center w-full p-full overflow-x-hidden'>
       <Container>
         <HeroPost
           title={heroPost.title}
